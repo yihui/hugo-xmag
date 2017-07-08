@@ -1,10 +1,10 @@
-name = "XMin"
+name = "XMag"
 license = "MIT"
-licenselink = "https://github.com/yihui/hugo-xmin/blob/master/LICENSE.md"
-description = "eXtremely Minimal Hugo theme: about 150 lines of code in total, including HTML and CSS"
-homepage = "https://xmin.yihui.name"
-tags = ["minimal", "blog", "personal", "clean", "simple", "starter", "minimalist"]
-features = ["blog"]
+licenselink = "https://github.com/yihui/hugo-xmag/blob/master/LICENSE.md"
+description = "A minimal magazine theme for Hugo"
+homepage = "https://xmag.yihui.name"
+tags = ["minimal", "magazine", "clean", "simple", "minimalist", "blog"]
+features = ["blog", "magazine"]
 min_version = "0.18"
 
 [author]
