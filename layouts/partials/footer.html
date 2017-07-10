@@ -1,9 +1,42 @@
-  <footer>
-  {{ partial "foot_custom.html" . }}
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<footer>
+{{ partial "foot_custom.html" . }}
+<div class="footer">
+  <ul class="menu">
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
   {{ with .Site.Params.footer }}
-  <hr/>
-  {{ . | markdownify }}
+  <div class="copyright">{{ . | markdownify }}</div>
   {{ end }}
-  </footer>
-  </body>
+</div>
+</footer>
+
+{{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
+<script src="//yihui.name/js/math-code.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+{{ end }}
+
+{{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+{{ end }}
+
+{{ template "_internal/google_analytics.html" . }}
+
+</body>
 </html>

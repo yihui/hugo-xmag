@@ -9,11 +9,31 @@
   </head>
 
   <body>
-    <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+    <nav class="header">
+      <div class="banner"><a href="{{ relURL .Site.BaseURL }}"{{ if not .Site.Params.banner }} class="text"{{ end }}>
+        {{ with .Site.Params.banner }}
+        <img src="{{ relURL .src }}" alt="{{ .alt }}" />
+        {{ else }}{{ (replaceRE "(&[A-Z]) (fr;)" "$1$2" (replaceRE "([A-Z])" "&$1 fr;" (upper .Site.Title))) | safeHTML }}
+        {{ end }}</a></div>
+      <div class="head-meta">
+      {{ if .IsPage }}
+        <span><a href="{{ relURL .Site.BaseURL }}">{{ (default "Back to Home" .Site.Params.text.back) | safeHTML }}</a></span>
+        {{ if .Params.date }}<span class="date">{{ .Date.Format "2006/01/02" }}</span>{{ end }}
+        {{ if .File.Path }}
+        {{ $RmdFile := (print .File.BaseFileName ".Rmd") }}
+        {{ if (where (readDir (print "content/" .File.Dir)) "Name" $RmdFile) }}
+          {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
+        {{ else }}
+          {{ $.Scratch.Set "FilePath" .File.Path }}
+        {{ end }}
+        {{ with .Site.Params.github_edit}}
+        <span><a href="{{ . }}{{ $.Scratch.Get "FilePath" }}">{{ (default "Edit this page" $.Site.Params.text.edit) | safeHTML }}</a></span>
+        {{ end }}
+        {{ end }}
+      {{ else }}
+        <span>{{ .Title }}</span>
+        <span>{{ now.Format "2006/01/02" }}</span>
+        {{ with .Paginator }}<span>{{ .PageNumber }} / {{ .TotalPages }}</span>{{ end }}
       {{ end }}
-    </ul>
-    <hr/>
+      </div>
     </nav>

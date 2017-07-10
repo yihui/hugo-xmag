@@ -1,21 +1,88 @@
 body {
-  max-width: 800px;
-  margin: auto;
-  padding: 1em;
+  margin: 0;
   line-height: 1.5em;
+}
+.header div, .container, .copyright, .menu {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 15px;
 }
 
 /* header and footer areas */
-.menu li { display: inline-block; }
-.article-meta, .menu a {
+.header {
+  border-bottom: 4px double #666;
+  text-align: center;
+  padding: 15px 0 5px;
+}
+.head-meta, .menu {
+  display: flex;
+  justify-content: space-between;
+}
+.banner { font-size: 4em; }
+.banner .text {
+  display: block;
+  margin: .3em auto .3em;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+.list section {
+  flex: 1 0 290px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  margin: 1em 0 0 15px;
+  padding-bottom: 1em;
+  overflow-x: hidden;
+}
+@media (min-width: 625px) {
+  .list section { max-width: calc(50% - 15px); }
+}
+@media (min-width: 930px) {
+  .list section { max-width: calc(33.33333% - 15px); }
+}
+.categories a {
+  font-size: .9em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #666;
+}
+h1 a, .banner a { color: #000; }
+h1 a:hover { text-decoration: underline; }
+.article-list h1 { margin: .2em auto .2em 0; }
+article { margin: 1em auto;}
+.article-meta {
   text-decoration: none;
   background: #eee;
   padding: 5px;
   border-radius: 5px;
 }
 .menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+.article-footer { text-align: left; }
+.title { font-size: 1.2em; }
+h1 a, .categories a, .header a, footer a { text-decoration: none; }
+.pagination { text-align: center; }
+.pagination li, .terms li { display: inline; }
+.pagination a { padding: 0 .2em; }
+.active a, .comments a { text-decoration: none; }
+.footer {
+  background: #666;
+  padding: 1em 0;
+}
+.footer, .footer a { color: #fff; }
+.copyright, .copyright a { color: #ccc; }
+.menu { margin-bottom: .5em; }
+.menu li {
+  display: inline-block;
+  font-weight: bolder;
+}
+.menu a { padding: .5em; }
+.menu a:hover {
+  color: #000;
+  background: #fff;
+}
+
 hr {
   border-style: dashed;
   color: #ddd;
@@ -48,3 +115,30 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 tr:nth-child(even) { background: #eee }
+
+.thumbnail {
+  height: 5.1em;
+  width: 6.8em;
+  float: left;
+  overflow: hidden;
+  margin: 5px 8px;
+  box-shadow: 0 0 8px #666;
+}
+#TableOfContents, #TOC, .comments {
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.comments a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+.terms { padding-left: 0; }
+.post-nav { margin: .5em 0; }
+.post-nav span {
+  display: inline-block;
+  width: 45%;
+}
+.nav-prev { text-align: right; }
+.nav-next { text-align: left; }

@@ -1,18 +1,37 @@
 {{ partial "header.html" . }}
 
-{{if not .IsHome }}
-<h1>{{ .Title }}</h1>
-{{ end }}
-
-{{ .Content }}
-
-<ul>
-  {{ range (where .Data.Pages "Section" "!=" "") }}
-  <li>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .URL }}">{{ .Title }}</a>
-  </li>
+<div class="container">
+<main class="list">
+{{ range (where .Paginator.Pages "Section" "post") }}
+<section class="article-list">
+  {{ with .Params.categories }}
+  {{ range first 1 . }}
+  <div class="categories">
+    <a href="{{ relURL (print "/categories/" . | urlize) }}">{{ . }}</a>
+  </div>
   {{ end }}
-</ul>
+  {{ end }}
+  <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
+  <div>
+    <span>{{ .Date.Format "2006/01/02" }}</span>
+    {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
+  </div>
+  <div class="summary">
+    {{ with .Params.thumbnail }}
+    <div class="thumbnail"><img src="{{ relURL . }}" alt="Thumbnail" /></div>
+    {{ else }}
+    {{ $img := findRE "<img src=\"[^\"]+\"" .Content 1 }}
+    {{ range $img }}
+    <div class="thumbnail">{{ (print . " alt=\"Thumbnail\" />") | safeHTML }}</div>
+    {{ end }}
+    {{ end }}
+    {{ (default .Summary (.Description | markdownify | plainify)) | truncate (default 200 .Site.Params.summary_length) }}
+    <a href="{{ .URL }}" class="more">{{ (default "Read more &rarr;" .Site.Params.text.more) | safeHTML }}</a>
+  </div>
+</section>
+{{ end }}
+</main>
+<nav>{{ template "_internal/pagination.html" . }}</nav>
+</div>
 
 {{ partial "footer.html" . }}
