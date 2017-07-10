@@ -26,7 +26,7 @@
     <div class="thumbnail">{{ (print . " alt=\"Thumbnail\" />") | safeHTML }}</div>
     {{ end }}
     {{ end }}
-    {{ (default .Summary (.Description | markdownify)) | plainify | truncate (default 200 .Site.Params.summary_length) }}
+    {{ (default .Summary (.Description | markdownify)) | plainify | truncate (default 200 .Site.Params.summary_length) | replaceRE "&amp;" "&" | safeHTML }}
     <a href="{{ .URL }}" class="more">{{ (default "Read more &rarr;" .Site.Params.text.more) | safeHTML }}</a>
   </div>
 </section>
