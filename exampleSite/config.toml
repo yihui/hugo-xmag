@@ -38,6 +38,7 @@ paginate = 6
 
 [params]
     description = "A website built through Hugo and blogdown."
+    summary_length = 400
     github_edit = "https://github.com/yihui/hugo-xmag/edit/master/exampleSite/content/"
     footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
 
