@@ -7,7 +7,6 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
-preserveTaxonomyNames = true
 hasCJKLanguage = true
 enableEmoji = true
 paginate = 6
