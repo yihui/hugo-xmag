@@ -1,7 +1,7 @@
 ---
 title: A Plain Markdown Post
 author: Yihui Xie
-date: '2016-02-14'
+date: '2017-02-14'
 categories:
   - Example
   - Hugo
@@ -11,6 +11,7 @@ tags:
   - MathJax
   - Pandoc
   - RStudio
+toc: true
 ---
 
 This sample post is mainly for [**blogdown**](https://github.com/rstudio/blogdown) users. If you do not use **blogdown**, you can skip the first section.

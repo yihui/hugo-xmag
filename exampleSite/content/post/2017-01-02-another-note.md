@@ -1,9 +1,9 @@
 ---
 title: Another Note on A blogdown Tutorial
 author: Yihui Xie
-date: '2017-06-14'
+date: '2017-01-02'
 categories:
-  - Example
+  - Note
 tags:
   - Tutorial
 slug: another-note

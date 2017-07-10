@@ -1,10 +1,11 @@
 ---
 title: A Quick Note on Two Beautiful Websites
 author: Yihui Xie
-date: '2017-06-13'
+date: '2017-01-01'
 categories:
-  - Example
+  - Note
 slug: a-quick-note
+thumbnail: https://cdn.shopify.com/s/files/1/0070/7032/files/darth_wat_grande.jpg
 ---
 
 To me, the two most impressive websites based on **blogdown** are:

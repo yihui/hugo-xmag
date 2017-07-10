@@ -1,12 +1,16 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "A minimal Hugo website"
-theme = "hugo-xmin"
+title = "Hugo XMag"
+theme = "hugo-xmag"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
+preserveTaxonomyNames = true
+hasCJKLanguage = true
+enableEmoji = true
+paginate = 6
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
@@ -32,6 +36,13 @@ footnotereturnlinkcontents = "↩"
     name = "Subscribe"
     url = "/index.xml"
 
+
 [params]
     description = "A website built through Hugo and blogdown."
+    github_edit = "https://github.com/yihui/hugo-xmag/edit/master/exampleSite/content/"
     footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+
+[params.text]
+    back = "&larr; Back to Home"
+    edit = "Edit this page &rarr;"
+    more = "(Read more &rarr;)"

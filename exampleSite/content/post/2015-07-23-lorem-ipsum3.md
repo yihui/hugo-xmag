@@ -1,8 +1,8 @@
 ---
-title: Lorem Ipsum
-date: '2015-07-23'
+title: Yet Another Lorem Ipsum
+date: '2015-07-25'
 categories:
-  - Test
+  - Demo
 tags:
   - Markdown
   - Lorem Ipsum
