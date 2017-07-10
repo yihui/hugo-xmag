@@ -2,7 +2,8 @@
 
 <div class="container">
 <main class="list">
-{{ range (where .Paginator.Pages "Section" "post") }}
+{{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
+{{ range $paginator.Pages }}
 <section class="article-list">
   {{ with .Params.categories }}
   {{ range first 1 . }}

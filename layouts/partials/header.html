@@ -33,7 +33,8 @@
       {{ else }}
         <span>{{ .Title }}</span>
         <span>{{ now.Format "2006/01/02" }}</span>
-        {{ with .Paginator }}<span>{{ .PageNumber }} / {{ .TotalPages }}</span>{{ end }}
+        {{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
+        {{ with $paginator }}<span>{{ .PageNumber }} / {{ .TotalPages }}</span>{{ end }}
       {{ end }}
       </div>
     </nav>
