@@ -131,6 +131,9 @@ tr:nth-child(even) { background: #eee }
   overflow: hidden;
   margin: 5px 8px 5px 0;
   box-shadow: 0 0 8px #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #TableOfContents, #TOC, .comments {
   border: 1px solid #eee;
