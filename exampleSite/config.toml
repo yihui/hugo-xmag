@@ -45,4 +45,3 @@ paginate = 6
 [params.text]
     back = "&larr; Back to Home"
     edit = "Edit this page &rarr;"
-    more = "(Read more &rarr;)"

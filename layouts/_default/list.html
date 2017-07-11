@@ -18,6 +18,7 @@
     {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
   </div>
   <div class="summary">
+    <a href="{{ .URL }}">
     {{ with .Params.thumbnail }}
     <div class="thumbnail"><img src="{{ relURL . }}" alt="Thumbnail" /></div>
     {{ else }}
@@ -27,7 +28,7 @@
     {{ end }}
     {{ end }}
     {{ (default .Summary (.Description | markdownify)) | plainify | truncate (default 200 .Site.Params.summary_length) | replaceRE "&amp;" "&" | safeHTML }}
-    <a href="{{ .URL }}" class="more">{{ (default "Read more &rarr;" .Site.Params.text.more) | safeHTML }}</a>
+    </a>
   </div>
 </section>
 {{ end }}
