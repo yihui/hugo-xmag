@@ -4,13 +4,14 @@ body {
   background: #fafafa;
 }
 .header div, .container, .copyright, .menu {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   padding: 0 15px;
 }
-.container {
-  padding: inherit;
-  hyphens: auto;
+.page .header div, .page .container, .page .copyright, .page .menu { max-width: 900px; }
+.container { hyphens: auto; }
+@media (max-width: 930px) {
+  .page .container { padding: 0; }
 }
 main { margin-bottom: 15px; }
 
@@ -36,17 +37,17 @@ main { margin-bottom: 15px; }
   margin-left: -15px;
 }
 .list section {
-  flex: 1 0 290px;
+  flex: 1 0 350px;
   box-sizing: border-box;
   box-shadow: 0 0 8px #ccc;
   margin: 1em 0 0 15px;
   padding: 1em;
   overflow-x: hidden;
 }
-@media (min-width: 625px) {
+@media (min-width: 715px) {
   .list section { max-width: calc(50% - 15px); }
 }
-@media (min-width: 930px) {
+@media (min-width: 1080px) {
   .list section { max-width: calc(33.33333% - 15px); }
 }
 .categories a {
