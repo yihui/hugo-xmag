@@ -27,7 +27,12 @@
     <div class="thumbnail">{{ (print . " alt=\"Thumbnail\" />") | safeHTML }}</div>
     {{ end }}
     {{ end }}
-    {{ (default .Summary (.Description | markdownify)) | plainify | truncate (default 200 .Site.Params.summary_length) | replaceRE "&amp;" "&" | safeHTML }}
+    {{ if and .Description (or .Params.use_description .Site.Params.use_description) }}
+    {{ $.Scratch.Set "summary" .Description }}
+    {{ else }}
+    {{ $.Scratch.Set "summary" (delimit (.Content | findRE "<p.*?>(.|\n)*?</p>") "[&hellip;] ") }}
+    {{ end }}
+    {{ ($.Scratch.Get "summary") | plainify | truncate (default 200 .Site.Params.summary_length) | replaceRE "&amp;" "&" | safeHTML }}
     </a>
   </div>
 </section>
