@@ -68,7 +68,7 @@ article { padding: 1em; }
 .menu, .article-meta, footer { text-align: center; }
 .article-footer { text-align: left; }
 .title { font-size: 1.2em; }
-.article-list a, .header a, footer a, .active a, .comments a { text-decoration: none; }
+.article-list a, .header a, footer a, .categories a, .active a, .comments a { text-decoration: none; }
 .pagination { text-align: center; }
 .pagination li, .terms li { display: inline; }
 .pagination a { padding: 0 .2em; }
