@@ -29,7 +29,7 @@ main { margin-bottom: 15px; }
 .banner { font-size: 4em; }
 .banner .text {
   display: block;
-  margin: .3em auto .3em;
+  line-height: 1em;
 }
 .list {
   display: flex;
