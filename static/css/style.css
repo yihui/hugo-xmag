@@ -1,11 +1,12 @@
 body {
   margin: 0;
   line-height: 1.5em;
+  background: #fafafa;
 }
 .header div, .container, .copyright, .menu {
   max-width: 900px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 15px 15px;
 }
 
 /* header and footer areas */
@@ -13,6 +14,7 @@ body {
   border-bottom: 4px double #666;
   text-align: center;
   padding: 15px 0 5px;
+  background: #fff;
 }
 .head-meta, .menu {
   display: flex;
@@ -31,9 +33,9 @@ body {
 .list section {
   flex: 1 0 290px;
   box-sizing: border-box;
-  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px #ccc;
   margin: 1em 0 0 15px;
-  padding-bottom: 1em;
+  padding: 1em;
   overflow-x: hidden;
 }
 @media (min-width: 625px) {
@@ -48,10 +50,10 @@ body {
   text-transform: uppercase;
   color: #666;
 }
-h1 a, .banner a { color: #000; }
+.article-list a, .banner a { color: #000; }
 h1 a:hover { text-decoration: underline; }
 .article-list h1 { margin: .2em auto .2em 0; }
-article { margin: 1em auto;}
+article { margin: 1em auto 0;}
 .article-meta {
   text-decoration: none;
   background: #eee;
@@ -61,11 +63,10 @@ article { margin: 1em auto;}
 .menu, .article-meta, footer { text-align: center; }
 .article-footer { text-align: left; }
 .title { font-size: 1.2em; }
-h1 a, .categories a, .header a, footer a { text-decoration: none; }
+.article-list a, .header a, footer a, .active a, .comments a { text-decoration: none; }
 .pagination { text-align: center; }
 .pagination li, .terms li { display: inline; }
 .pagination a { padding: 0 .2em; }
-.active a, .comments a { text-decoration: none; }
 .footer {
   background: #666;
   padding: 1em 0;
@@ -92,11 +93,14 @@ hr {
 pre {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 5px #eee;
-  padding: 1em;
   overflow-x: auto;
 }
 code { background: #f9f9f9; }
-pre code { background: none; }
+pre code {
+  background: none;
+  padding: .5em;
+  display: block;
+}
 
 /* misc elements */
 img, iframe, video { max-width: 100%; }
