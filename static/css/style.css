@@ -6,8 +6,9 @@ body {
 .header div, .container, .copyright, .menu {
   max-width: 900px;
   margin: auto;
-  padding: 0 15px 15px;
+  padding: 0 15px;
 }
+.container { padding-bottom: 15px; }
 
 /* header and footer areas */
 .header {
