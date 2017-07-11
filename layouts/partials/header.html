@@ -9,7 +9,7 @@
     {{ partial "head_custom.html" . }}
   </head>
 
-  <body>
+  <body{{if .IsPage}} class="page"{{ end }}>
     <nav class="header">
       <div class="banner"><a href="{{ relURL .Site.BaseURL }}"{{ if not .Site.Params.banner }} class="text"{{ end }}>
         {{ with .Site.Params.banner }}
