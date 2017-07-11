@@ -69,6 +69,7 @@ article { padding: 1em; }
 .menu, .article-meta, footer { text-align: center; }
 .article-footer { text-align: left; }
 .title { font-size: 1.2em; }
+.article-list h1, .title { line-height: 1.2em; }
 .article-list a, .header a, footer a, .categories a, .active a, .comments a { text-decoration: none; }
 .pagination { text-align: center; }
 .pagination li, .terms li { display: inline; }
@@ -157,3 +158,8 @@ tr:nth-child(even) { background: #eee }
 }
 .nav-prev { text-align: right; }
 .nav-next { text-align: left; }
+.footnotes { font-size: .9em; }
+.footnotes hr {
+  width: 50%;
+  margin-left: 0;
+}
