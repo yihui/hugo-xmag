@@ -129,7 +129,7 @@ tr:nth-child(even) { background: #eee }
   width: 6.8em;
   float: left;
   overflow: hidden;
-  margin: 5px 8px;
+  margin: 5px 8px 5px 0;
   box-shadow: 0 0 8px #666;
 }
 #TableOfContents, #TOC, .comments {
