@@ -79,7 +79,10 @@ article { padding: 1em; }
 }
 .footer, .footer a { color: #fff; }
 .copyright, .copyright a { color: #ccc; }
-.menu { margin-bottom: .5em; }
+.menu {
+  margin-bottom: .5em;
+  flex-wrap: wrap;
+}
 .menu li {
   display: inline-block;
   font-weight: bolder;
