@@ -32,7 +32,7 @@
     {{ else }}
     {{ $.Scratch.Set "summary" (delimit (.Content | findRE "(<p.*?>(.|\n)*?</p>\\s*)+") "[&hellip;] ") }}
     {{ end }}
-    {{ ($.Scratch.Get "summary") | plainify | truncate (default 200 .Site.Params.summary_length) | replaceRE "&amp;" "&" | safeHTML }}
+    {{ ($.Scratch.Get "summary") | plainify | truncate (default 200 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML }}
     </a>
   </div>
 </section>
