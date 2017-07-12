@@ -44,6 +44,9 @@ main { margin-bottom: 15px; }
   padding: 1em;
   overflow-x: hidden;
 }
+@media (max-width: 380px) {
+  .list section { flex: auto; }
+}
 @media (min-width: 715px) {
   .list section { max-width: calc(50% - 15px); }
 }
