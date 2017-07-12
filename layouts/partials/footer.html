@@ -5,7 +5,7 @@
 <div class="footer">
   <ul class="menu">
     {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+    <li><a href="{{ .URL | relURL }}"><span data-hover="{{ .Name }}">{{ .Name }}</span></a></li>
     {{ end }}
   </ul>
   {{ with .Site.Params.footer }}
