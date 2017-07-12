@@ -17,6 +17,7 @@ main { margin-bottom: 15px; }
 
 /* header and footer areas */
 .header {
+  border-top: 5px solid #666;
   border-bottom: 4px double #666;
   text-align: center;
   padding: 15px 0 5px;
