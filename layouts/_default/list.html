@@ -5,13 +5,15 @@
 {{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
 {{ range $paginator.Pages }}
 <section class="article-list">
+  <div class="categories">
   {{ with .Params.categories }}
   {{ range first 1 . }}
-  <div class="categories">
     <a href="{{ relURL (print "/categories/" . | urlize) }}">{{ . }}</a>
+  {{ end }}
+  {{ else }}
+    <a>{{ default "Uncategorized" .Site.Params.text.uncategorized }}</a>
+  {{ end }}
   </div>
-  {{ end }}
-  {{ end }}
   <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
   <div>
     <span>{{ .Date.Format "2006/01/02" }}</span>

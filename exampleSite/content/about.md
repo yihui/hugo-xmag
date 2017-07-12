@@ -93,6 +93,7 @@ There are a few phrases that you can "translate" (I didn't use Hugo's multi-lang
     edit = "Edit this page"
     tags = "Tags: "
     truncated = " &hellip;"
+    uncategorized = "Uncategorized"
 ```
 
 You can define a data file under `data/` to store all authors information, e.g., you can use a TOML file `data/authors.toml` (or YAML/JSON):
