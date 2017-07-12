@@ -50,13 +50,13 @@ main { margin-bottom: 15px; }
 @media (min-width: 1080px) {
   .list section { max-width: calc(33.33333% - 15px); }
 }
+.article-list a, .banner a { color: #000; }
 .categories a {
   font-size: .9em;
   font-weight: bolder;
   text-transform: uppercase;
   color: #666;
 }
-.article-list a, .banner a { color: #000; }
 h1 a:hover { text-decoration: underline; }
 .article-list h1 { margin: .2em auto .2em 0; }
 article { padding: 1em; }
