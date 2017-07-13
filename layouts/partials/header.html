@@ -11,11 +11,7 @@
 
   <body{{if .IsPage}} class="page"{{ end }}>
     <nav class="header">
-      <div class="banner"><a href="{{ relURL .Site.BaseURL }}"{{ if not .Site.Params.banner }} class="text"{{ end }}>
-        {{ with .Site.Params.banner }}
-        <img src="{{ relURL .src }}" alt="{{ .alt }}" />
-        {{ else }}{{ (replaceRE "(&[A-Z]) (fr;)" "$1$2" (replaceRE "([A-Z])" "&$1 fr;" (upper .Site.Title))) | safeHTML }}
-        {{ end }}</a></div>
+      {{ partial "banner.html" . }}
       <div class="head-meta">
       {{ if .IsPage }}
         <span><a href="{{ relURL .Site.BaseURL }}">{{ (default "Back to Home" .Site.Params.text.back) | safeHTML }}</a></span>

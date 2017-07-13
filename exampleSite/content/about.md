@@ -109,7 +109,7 @@ To add a table of contents to an article, you can add `toc: true` to the YAML me
 
 # Custom layouts
 
-Besides the custom layout^[If this is the first time you have heard about "customizing layouts", please read the Hugo documentation first: https://gohugo.io/themes/customizing/.] files `head_custom.html` and `foot_custom.html` supported in **XMin** (see [documentation](https://xmin.yihui.name/about/)), this theme added two more layout files `comments.html` and `info.html` under `layouts/partials/`. The former can be used to add a comment section, e.g., if you want to use Hugo's default Disqus template, just add this to `comments.html`:
+Besides the custom layout^[If this is the first time you have heard about "customizing layouts", please read the Hugo documentation first: https://gohugo.io/themes/customizing/.] files `head_custom.html` and `foot_custom.html` supported in **XMin** (see [documentation](https://xmin.yihui.name/about/)), this theme added a few more layout files `banner.html`, `comments.html` and `info.html` under `layouts/partials/`. The first can be used to customize the banner. The second can be used to add a comment section, e.g., if you want to use Hugo's default Disqus template, just add this to `comments.html`:
 
 ```
 {{ template "_internal/disqus.html" . }}
