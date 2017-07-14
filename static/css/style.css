@@ -157,14 +157,11 @@ tr:nth-child(even) { background: #eee }
   font-size: 1.2em;
 }
 .terms { padding-left: 0; }
-.post-nav { margin: .5em 0; }
-.post-nav span {
-  display: inline-block;
-  vertical-align: top;
+.post-nav {
+  margin: .5em 0;
+  display: flex;
+  justify-content: space-between;
 }
-.post-nav .nav-prev, .post-nav .nav-next { width: calc(50% - 1em); }
-.nav-prev { text-align: right; }
-.nav-next { text-align: left; }
 .footnotes { font-size: .9em; }
 .footnotes hr {
   width: 50%;
