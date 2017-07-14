@@ -30,17 +30,7 @@
 {{ .Content }}
 </main>
 
-{{ with .Params.author }}
-{{ if $.Site.Data.authors }}
-{{ with (index $.Site.Data.authors .) }}
-<section class="article-meta article-footer">
-  <h3>{{ default "About the Author" $.Site.Params.text.about_author }}</h3>
-  <p>{{ . | markdownify }}</p>
-</section>
-{{ end }}
-{{ end }}
-{{ end }}
-
+{{ partial "author.html" . }}
 {{ partial "info.html" . }}
 
 {{ if .Section }}
