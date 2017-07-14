@@ -32,14 +32,7 @@
 
 {{ partial "author.html" . }}
 {{ partial "info.html" . }}
-
-{{ if .Section }}
-<nav class="post-nav">
-  <span class="nav-prev">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}</span> <span class="nav-sep">&hercon;</span>
-  <span class="nav-next">{{ with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}</span>
-</nav>
-{{ end }}
-
+{{ partial "prev-next.html" . }}
 {{ partial "comments.html" . }}
 </article>
 </div>
