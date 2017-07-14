@@ -18,8 +18,8 @@
   {{ with .Params.tags }}
   <div>{{ default "Tags: " (index $.Site.Params.text "tags") }} {{ range $i, $e := . }}{{ if $i }}; {{ end }}<a href="{{ relURL (print "/tags/" $e | urlize) }}">{{ $e }}</a>{{ end }}
   </div>
-  {{ partial "meta.html" . }}
   {{ end }}
+  {{ partial "meta.html" . }}
 
 </div>
 
