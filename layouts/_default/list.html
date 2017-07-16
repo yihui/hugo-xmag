@@ -15,9 +15,9 @@
   {{ end }}
   </div>
   <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
-  <div>
-    <span>{{ .Date.Format "2006/01/02" }}</span>
-    {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
+  <div class="date-author">
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    {{ with .Params.author }}<span class="author">{{ . }}</span>{{ end }}
   </div>
   <div class="summary">
     <a href="{{ .URL }}">
