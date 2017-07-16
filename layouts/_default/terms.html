@@ -3,7 +3,7 @@
 <div class="container">
 <article>
 <main>
-<h1>{{ .Title }}</h1>
+<h1>{{ $.Scratch.Get "Title" }}</h1>
 
 <ul class="terms">
   {{ range $key, $value := .Data.Terms }}

@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ $.Scratch.Set "Title" (default .Title (index .Site.Params.text (print "title_" (lower .Title)))) }}
+    <title>{{ if eq ($.Scratch.Get "Title") .Site.Title }}{{ .Site.Title }}{{ else }}{{ ($.Scratch.Get "Title") }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
@@ -28,7 +29,7 @@
         {{ end }}
         {{ end }}
       {{ else }}
-        <span>{{ .Title }}</span>
+        <span>{{ $.Scratch.Get "Title" }}</span>
         <span>{{ now.Format "2006/01/02" }}</span>
         {{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
         {{ with $paginator }}<span>{{ .PageNumber }} / {{ .TotalPages }}</span>{{ end }}
