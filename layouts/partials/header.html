@@ -16,7 +16,7 @@
       <div class="head-meta">
       {{ if .IsPage }}
         <span><a href="{{ relURL .Site.BaseURL }}">{{ (default "Back to Home" .Site.Params.text.back) | safeHTML }}</a></span>
-        {{ if .Params.date }}<span class="date">{{ .Date.Format "2006/01/02" }}</span>{{ end }}
+        {{ if .Params.date }}<span class="date">{{ .Date.Format "2006-01-02" }}</span>{{ end }}
         {{ if .File.Path }}
         {{ $RmdFile := (print .File.BaseFileName ".Rmd") }}
         {{ if (where (readDir (print "content/" .File.Dir)) "Name" $RmdFile) }}
@@ -30,7 +30,7 @@
         {{ end }}
       {{ else }}
         <span>{{ $.Scratch.Get "Title" }}</span>
-        <span>{{ now.Format "2006/01/02" }}</span>
+        <span>{{ now.Format "2006-01-02" }}</span>
         {{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
         <span>{{ with $paginator }}{{ if .TotalPages }}{{ .PageNumber }} / {{ .TotalPages }}{{ end }}{{ end }}</span>
       {{ end }}
