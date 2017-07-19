@@ -1,0 +1,1 @@
+{{ replace ((jsonify .Params.author) | replaceRE "[\\[\"\\]]" "") "," (default ", " $.Site.Params.text.author_delimiter) | safeHTML }}

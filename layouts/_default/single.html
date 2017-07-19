@@ -11,8 +11,8 @@
 
   <h1><span class="title">{{ .Title }}</span></h1>
 
-  {{ with .Params.author }}
-  <h3 class="author">{{ . }}</h3>
+  {{ if .Params.author }}
+  <h3 class="author">{{ partial "author_names.html" . }}</h3>
   {{ end }}
 
   {{ with .Params.tags }}

@@ -1,6 +1,8 @@
 ---
 title: A Plain Markdown Post
-author: Yihui Xie
+author:
+  - Yihui Xie
+  - Frida Gomam
 date: '2017-02-14'
 categories:
   - Example

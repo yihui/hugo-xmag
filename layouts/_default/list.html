@@ -16,7 +16,7 @@
   </div>
   <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
   <div class="date-author">
-    {{ with .Params.author }}<span class="author">{{ . }}</span> / {{ end }}
+    {{ if .Params.author }}<span class="author">{{ partial "author_names.html" . }}</span> / {{ end }}
     <span class="date">{{ .Date.Format "2006-01-02" }}</span>
   </div>
   <div class="summary">
