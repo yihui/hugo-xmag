@@ -29,8 +29,8 @@
     <div class="thumbnail">{{ (print . " alt=\"Thumbnail\" />") | safeHTML }}</div>
     {{ end }}
     {{ end }}
-    {{ if and .Description (or .Params.use_description .Site.Params.use_description) }}
-    {{ $.Scratch.Set "summary" .Description }}
+    {{ with .Description }}
+    {{ $.Scratch.Set "summary" . }}
     {{ else }}
     {{ $.Scratch.Set "summary" (delimit (.Content | findRE "(<p.*?>(.|\n)*?</p>\\s*)+") "[&hellip;] ") }}
     {{ end }}
