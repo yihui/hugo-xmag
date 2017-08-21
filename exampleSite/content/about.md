@@ -51,19 +51,11 @@ Alternatively, you can provide a banner image:
 
 By default, each summary block on the homepage contains the first 200 letters extracted from all paragraphs of an article. I find Hugo's built in `.Summary` often unsatisfactory (e.g. it may contain headings and code blocks, which really should not go to the summary), so I wrote my own version. It works much better and the size of most summary blocks will be the same, unless certain articles are really short. The length 200 can be customized via `params.summary_length`.
 
-If you are not satisfied with the automatic summary, you can specify the `description` option in the (YAML) metadata of your Markdown document, and set `use_description` to `true`, e.g.,
+If you are not satisfied with the automatic summary, you can specify the `description` option in the (YAML) metadata of your Markdown document, e.g.,
 
 ```yaml
 title: "My Cool Post"
 description: "Please use this as the summary."
-use_description: true
-```
-
-The `use_description` option can be a global parameter set in `config.toml` if you want to provide custom summaries to all articles on your site.
-
-```toml
-[params]
-    use_description = true
 ```
 
 Each summary block may contain a thumbnail, which is the first image in an article if exists. You can override it by providing the `thumbnail` option in the meta data of your Markdown document, e.g.,
