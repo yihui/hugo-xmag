@@ -16,12 +16,20 @@
 
 {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
 <script src="//yihui.name/js/math-code.js"></script>
+{{ if .Site.Params.libpaths.mathjax }}
+<script async src="{{ .Site.Params.libpaths.mathjax }}?config=TeX-MML-AM_CHTML"></script>
+{{ else }}
 <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+{{ end }}
 {{ end }}
 
 {{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
+{{ if .Site.Params.libpaths.hljs }}
+<script src="{{ .Site.Params.libpaths.hljs }}"></script>
+{{ else }}
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+{{ end }}
 <script>
 hljs.configure({languages: []});
 hljs.initHighlightingOnLoad();
