@@ -28,4 +28,18 @@ It also supports features that are probably not even worth mentioning:
 
 Most features can be configured through `config.toml`, and a few can be enabled by custom layouts. Please see the detailed documentation on the [About](https://xmag.yihui.name/about/) page of the theme website. The source code is available [on Github](https://github.com/yihui/hugo-xmag) (MIT license).
 
+
+## Quickstart guide
+
+**Watch out** The standard [Quickstart Guide](https://gohugo.io/getting-started/quick-start/) fails. In Step 3 do not proceed past `git init`. 
+
+Then, to install this theme in your Hugo site
+
+1.  Download this repo and unzip it
+1.  Change directory to the site root
+1.  Copy the downloaded theme into `themes/`: `cp -r ~/Downloads/hugo-mag-master themes/hugo-mag`
+1.  Copy the example site into your site root: `cp -r themes/hugo-mag/exampleSite .` 
+
+Now resume the Quickstart Guide at Step 5.
+
 [![Screenshot](https://github.com/yihui/hugo-xmag/raw/master/images/screenshot.png)](https://xmag.yihui.name)
