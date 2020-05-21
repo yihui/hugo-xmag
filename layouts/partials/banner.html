@@ -2,6 +2,6 @@
 <a href="{{ relURL .Site.BaseURL }}"{{ if not .Site.Params.banner }} class="text"{{ end }}>
 {{ with .Site.Params.banner }}
 <img src="{{ relURL .src }}" alt="{{ .alt }}" />
-{{ else }}{{ (replaceRE "(&[A-Z]) (fr;)" "$1$2" (replaceRE "([A-Z])" "&$1 fr;" (upper .Site.Title))) | safeHTML }}
+{{ else }}{{ .Site.Title | safeHTML }}
 {{ end }}</a>
 </div>

@@ -30,7 +30,9 @@ main { margin-bottom: 15px; }
 .banner { font-size: 4em; }
 .banner .text {
   display: block;
+  font-family: 'Pirata One', serif;
   line-height: 1em;
+  text-shadow: 2px 2px rgba(0,0,0,.2);
 }
 .list {
   display: flex;

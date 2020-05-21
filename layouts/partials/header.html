@@ -7,6 +7,7 @@
     <title>{{ if eq ($.Scratch.Get "Title") .Site.Title }}{{ .Site.Title }}{{ else }}{{ ($.Scratch.Get "Title") }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pirata+One">
     {{ partial "head_custom.html" . }}
   </head>
 
