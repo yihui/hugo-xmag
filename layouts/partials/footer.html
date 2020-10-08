@@ -1,4 +1,4 @@
-<script async src="//yihui.name/js/center-img.js"></script>
+<script async src="//yihui.org/js/center-img.js"></script>
 
 <footer>
 {{ partial "foot_custom.html" . }}
@@ -15,7 +15,7 @@
 </footer>
 
 {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
-<script src="//yihui.name/js/math-code.js"></script>
+<script src="//yihui.org/js/math-code.js"></script>
 <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {{ end }}
 

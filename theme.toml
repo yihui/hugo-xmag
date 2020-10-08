@@ -2,11 +2,11 @@ name = "XMag"
 license = "MIT"
 licenselink = "https://github.com/yihui/hugo-xmag/blob/master/LICENSE.md"
 description = "A minimal magazine theme for Hugo"
-homepage = "https://xmag.yihui.name"
+homepage = "https://xmag.yihui.org"
 tags = ["minimal", "magazine", "clean", "simple", "minimalist", "blog", "responsive", "Google Analytics", "Syntax Highlighting"]
 features = ["blog", "magazine"]
 min_version = "0.18"
 
 [author]
   name = "Yihui Xie"
-  homepage = "https://yihui.name"
+  homepage = "https://yihui.org"
