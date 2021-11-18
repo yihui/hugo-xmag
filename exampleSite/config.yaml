@@ -42,6 +42,8 @@ params:
     truncated: "&hellip;"
 
 markup:
+  highlight:
+    codeFences: false
   goldmark:
     renderer:
       unsafe: true
