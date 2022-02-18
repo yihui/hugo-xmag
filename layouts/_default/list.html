@@ -23,8 +23,8 @@
   </div>
   <div class="summary">
     <a href="{{ .RelPermalink }}">
-    {{ with .Params.thumbnail }}
-    <div class="thumbnail"><img src="{{ relURL . }}" alt="Thumbnail" /></div>
+    {{ with .Resources.GetMatch (printf "%s" .Params.thumbnail) }}
+    <div class="thumbnail"><img src="{{ relURL .Permalink }}" alt="Thumbnail" /></div>
     {{ else }}
     {{ $img := findRE "<img src=\"[^\"]+\"" .Content 1 }}
     {{ range $img }}
