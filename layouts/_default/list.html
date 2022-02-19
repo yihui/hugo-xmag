@@ -26,9 +26,13 @@
     {{ with .Resources.GetMatch (printf "%s" .Params.thumbnail) }}
     <div class="thumbnail"><img src="{{ relURL .Permalink }}" alt="Thumbnail" /></div>
     {{ else }}
+    {{ with  .Params.thumbnail }}
+    <div class="thumbnail"><img src="{{ relURL .}}" alt="Thumbnail" /></div>
+    {{ else }}
     {{ $img := findRE "<img src=\"[^\"]+\"" .Content 1 }}
     {{ range $img }}
     <div class="thumbnail">{{ (print . " alt=\"Thumbnail\" />") | safeHTML }}</div>
+    {{ end }}
     {{ end }}
     {{ end }}
     {{ with .Description }}
