@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ $.Scratch.Set "Title" (default .Title (index .Site.Params.text (print "title_" (lower .Title)))) }}
     <title>{{ if eq ($.Scratch.Get "Title") .Site.Title }}{{ .Site.Title }}{{ else }}{{ ($.Scratch.Get "Title") }} | {{ .Site.Title }}{{ end }}</title>
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pirata+One">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
 
@@ -32,7 +31,7 @@
         {{ end }}
       {{ else }}
         <span>{{ $.Scratch.Get "Title" }}</span>
-        <span>{{ now.Format "2006-01-02" }}</span>
+        <span>{{ .Site.Params.text.last_update }}{{ now.Format "2006-01-02" }}</span>
         {{ $pages := .Pages }}
         {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
         {{ $paginator := .Paginate (where $pages "Section" "!=" "") }}

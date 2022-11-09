@@ -1,4 +1,4 @@
-<script async src="//yihui.name/js/center-img.js"></script>
+<script async src="//yihui.org/js/center-img.js"></script>
 
 <footer>
 {{ partial "foot_custom.html" . }}
@@ -15,13 +15,13 @@
 </footer>
 
 {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
-<script src="//yihui.name/js/math-code.js"></script>
+<script src="//yihui.org/js/math-code.js"></script>
 <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {{ end }}
 
 {{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
 <script>
 hljs.configure({languages: []});
 hljs.initHighlightingOnLoad();

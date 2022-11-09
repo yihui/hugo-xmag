@@ -75,7 +75,7 @@ The page footer can be defined in `.Params.footer`, and the text is treated as M
 [params]
     summary_length = 200
     github_edit = "https://github.com/yihui/hugo-xmag/edit/master/exampleSite/content/"
-    footer = "&copy; [Yihui Xie](https://yihui.name) 2017"
+    footer = "&copy; [Yihui Xie](https://yihui.org) 2017"
 ```
 
 There are a few phrases that you can "translate" (I didn't use Hugo's multi-language feature just because I'm lazy):
@@ -104,7 +104,7 @@ To add a table of contents to an article, you can add `toc: true` to the YAML me
 
 # Custom layouts
 
-Besides the custom layout^[If this is the first time you have heard about "customizing layouts", please read the Hugo documentation first: https://gohugo.io/themes/customizing/.] files `head_custom.html` and `foot_custom.html` supported in **XMin** (see [documentation](https://xmin.yihui.name/about/)), this theme added a few more layout files such as `banner.html`, `comments.html` and `info.html` under `layouts/partials/`. The first can be used to customize the banner. The second can be used to add a comment section, e.g., if you want to use Hugo's default Disqus template, just add this to `comments.html`:
+Besides the custom layout^[If this is the first time you have heard about "customizing layouts", please read the Hugo documentation first: https://gohugo.io/themes/customizing/.] files `head_custom.html` and `foot_custom.html` supported in **XMin** (see [documentation](https://xmin.yihui.org/about/)), this theme added a few more layout files such as `banner.html`, `comments.html` and `info.html` under `layouts/partials/`. The first can be used to customize the banner. The second can be used to add a comment section, e.g., if you want to use Hugo's default Disqus template, just add this to `comments.html`:
 
 ```
 {{ template "_internal/disqus.html" . }}

@@ -1,0 +1,49 @@
+baseurl: "/"
+languageCode: "en-us"
+title: "Hugo XMag"
+theme: "hugo-xmag"
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+preserveTaxonomyNames: true
+footnotereturnlinkcontents: "↩"
+hasCJKLanguage: true
+enableEmoji: true
+paginate: 6
+
+permalinks:
+  post: "/post/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: About
+      url: /about/
+      weight: 2
+    - name: Categories
+      url: /categories/
+      weight: 3
+    - name: Tags
+      url: /tags/
+      weight: 4
+    - name: Subscribe
+      url: /index.xml
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 - 2020 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+  github_edit: "https://github.com/yihui/hugo-xmag/edit/master/exampleSite/content/"
+  summary_length: 300
+  text:
+    back: "&larr; Back to Home"
+    edit: "Edit this page &rarr;"
+    truncated: "&hellip;"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true

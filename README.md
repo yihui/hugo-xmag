@@ -26,10 +26,18 @@ It also supports features that are probably not even worth mentioning:
 
 - Table of contents for single pages
 
-Most features can be configured through `config.toml`, and a few can be enabled by custom layouts. Please see the detailed documentation on the [About](https://xmag.yihui.name/about/) page of the theme website. The source code is available [on Github](https://github.com/yihui/hugo-xmag) (MIT license).
-
+Most features can be configured through `config.toml`, and a few can be enabled by custom layouts. Please see the detailed documentation on the [About](https://xmag.yihui.org/about/) page of the theme website. The source code is available [on Github](https://github.com/yihui/hugo-xmag) (MIT license).
 
 ## Quickstart guide
+
+If you are an R user, the easiest way to get started with this theme is to install the **blogdown** package, and [use `blogdown::new_site()` to create a new site](https://bookdown.org/yihui/blogdown/a-quick-example.html):
+
+```r
+install.packages('blogdown')
+blogdown::new_site(theme = 'yihui/hugo-xmag')
+```
+
+If you do not use R, please read on.
 
 **Watch out** The standard [Quickstart Guide](https://gohugo.io/getting-started/quick-start/) fails. In Step 3 do not proceed past `git init`. 
 
@@ -42,4 +50,4 @@ Then, to install this theme in your Hugo site
 
 Now resume the Quickstart Guide at Step 5.
 
-[![Screenshot](https://github.com/yihui/hugo-xmag/raw/master/images/screenshot.png)](https://xmag.yihui.name)
+[![Screenshot](https://github.com/yihui/hugo-xmag/raw/master/images/screenshot.png)](https://xmag.yihui.org)
