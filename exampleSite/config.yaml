@@ -2,8 +2,6 @@ baseurl: "/"
 languageCode: "en-us"
 title: "Hugo XMag"
 theme: "hugo-xmag"
-googleAnalytics: ""
-disqusShortname: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 preserveTaxonomyNames: true
 footnotereturnlinkcontents: "↩"
