@@ -173,3 +173,7 @@ tr:nth-child(even) { background: #eee }
   width: 50%;
   margin-left: 0;
 }
+/* break long words */
+p, ul, ol, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
