@@ -7,7 +7,9 @@ preserveTaxonomyNames: true
 footnotereturnlinkcontents: "↩"
 hasCJKLanguage: true
 enableEmoji: true
-paginate: 6
+
+pagination:
+  pagerSize: 6
 
 permalinks:
   post: "/post/:year/:month/:day/:slug/"
