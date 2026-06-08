@@ -41,6 +41,9 @@ params:
     edit: "Edit this page &rarr;"
     truncated: "&hellip;"
 
+security:
+  allowContent: ['.*']
+
 markup:
   highlight:
     codeFences: false

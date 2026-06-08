@@ -32,10 +32,12 @@
       {{ else }}
         <span>{{ $.Scratch.Get "Title" }}</span>
         <span>{{ .Site.Params.text.last_update }}{{ now.Format "2006-01-02" }}</span>
+        {{ if .IsHome | or .IsSection }}
         {{ $pages := .Pages }}
         {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
         {{ $paginator := .Paginate (where $pages "Section" "!=" "") }}
         <span>{{ with $paginator }}{{ if .TotalPages }}{{ .PageNumber }} / {{ .TotalPages }}{{ end }}{{ end }}</span>
+        {{ end }}
       {{ end }}
       </div>
     </nav>
